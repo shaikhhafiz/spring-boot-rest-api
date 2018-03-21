@@ -1,8 +1,8 @@
 # Rest api using spring boot 
 
-Resources URL
+# Resources URL
 
-Manager resource:
+#Manager resource:
 
 GET:  http://localhost:8080/managers/
 
@@ -15,7 +15,7 @@ PUT:  http://localhost:8080/managers/manager/{id}
 DELETE: http://localhost:8080/managers/manager/{id}
 
 
-Employee resource
+#Employee resource
 
 GET: http://localhost:8080/managers/{managerId}/employees
 
