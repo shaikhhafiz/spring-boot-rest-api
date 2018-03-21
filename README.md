@@ -1,4 +1,4 @@
-# restSpring
+# Rest api using spring boot 
 
 Resources URL
 
