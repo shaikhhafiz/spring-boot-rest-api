@@ -56,11 +56,13 @@ public class Employee implements Serializable {
     @JoinColumn(name = "manager_id", nullable = false)
     private Manager manager;
 
+    @JsonIgnore
 	@Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     private Date createdAt;
 
+    @JsonIgnore
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
