@@ -55,10 +55,10 @@ public class ManagerController {
 	 * @return
 	 */
 	@GetMapping("/{id}")
-	public ResponseEntity<Manager> getManagerById(@PathVariable(value = "id") Long managerId) {
+	public ResponseEntity<?> getManagerById(@PathVariable(value = "id") Long managerId) {
 	    Manager manager = managerService.findById(managerId);
 	    if(manager == null) {
-	        return ResponseEntity.notFound().build();
+	    	return new ResponseEntity("Manager id is not found",HttpStatus.OK);
 	    }
 	    return ResponseEntity.ok().body(manager);
 	}
