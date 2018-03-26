@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "manager")
 @EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = {"createdAt", "updatedAt","employees"},
+@JsonIgnoreProperties(value = {"createdAt", "updatedAt"},
         allowGetters = true)
 public class Manager implements Serializable {
 
@@ -53,7 +53,6 @@ public class Manager implements Serializable {
     @NotBlank(message = "Salary can not be blank")
     private String salary;
     
-    @JsonIgnore
     @OneToMany(mappedBy="manager", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Employee> employees;
 
